@@ -13,9 +13,7 @@
   line-height: 24px;
   font-weight: 400;
 
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -56,11 +54,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(30, 30, 30, 0.8);
   display: grid;
   place-items: center;
-}
-
-.canvasOverlay-filled {
-  background-color: rgb(30, 30, 30);
 }

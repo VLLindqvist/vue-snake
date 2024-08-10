@@ -20,7 +20,7 @@ const show = computed(() => props.show);
   <Transition :css="false">
     <div
       v-if="show"
-      class="wrapper canvasOverlay"
+      class="wrapper canvasOverlay bg-light-transparent dark:bg-dark-transparent"
       v-motion="'gameOverOverlayWrapper'"
       :initial="{
         opacity: 0,
@@ -45,9 +45,11 @@ const show = computed(() => props.show);
         <n-text class="text-center" type="success">OMG! You actually won!</n-text>
       </n-h1>
 
-      <n-text class="gameWinInfo" depth="3">Press the button below to restart the game</n-text>
+      <n-text class="gameWinInfo text-dark dark:text-light" depth="3">
+        Press the button below to restart the game
+      </n-text>
       <button
-        class="restartIcon ease-in transition-colors duration-75 text-gray-400 hover:bg-gray-600 text-sm hover:text-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-400 rounded-full p-px text-center inline-grid place-items-center"
+        class="restartIcon ease-in text-dark dark:text-light transition-colors duration-75 hover:bg-gray-600 text-sm hover:text-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-400 rounded-full p-px text-center inline-grid place-items-center"
         @click="
           () => {
             gameStore.reset();

@@ -108,7 +108,7 @@ onUnmounted(() => {});
 
 <template>
   <span
-    class="snakeSegment"
+    class="snakeSegment dark:bg-white bg-primary"
     v-for="(data, i) of gameStore.snake"
     :id="i.toString()"
     ref="snakeSegmentRefs"
@@ -118,7 +118,6 @@ onUnmounted(() => {});
 
 <style scoped lang="scss">
 .snakeSegment {
-  background-color: white;
   position: absolute;
 }
 </style>

@@ -159,7 +159,7 @@ onUnmounted(() => {
 
 <template>
   <n-config-provider
-    class="p-3 grid place-items-center w-full h-full"
+    class="grid place-items-center w-full h-full bg-light dark:bg-dark"
     :theme-overrides="themeOverrides"
   >
     <Canvas />

@@ -25,8 +25,8 @@ const motions = useMotions();
         v-if="isPlaying && status === Status.Ongoing"
         :class="`score transition-colors duration-150 rounded-sm ${
           score > highScore
-            ? 'px-6 py-2 bg-secondary text-xl text-gray-800'
-            : 'px-5 py-1 bg-primary text-lg'
+            ? 'px-6 py-1 bg-secondary text-xl text-gray-800'
+            : 'px-5 py-0.5 dark:bg-primary dark:text-lg bg-gray-200 text-black'
         }`"
         type="primary"
         v-motion="'scoreBottom'"
@@ -56,7 +56,7 @@ const motions = useMotions();
 .wrapper {
   z-index: 1000;
   position: absolute;
-  bottom: -2rem;
+  bottom: -1rem;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr max-content 1fr;

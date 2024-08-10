@@ -32,7 +32,7 @@ const motions = useMotions();
   >
     <div
       v-if="show"
-      class="wrapper canvasOverlay"
+      class="wrapper canvasOverlay bg-light-transparent dark:bg-dark-transparent"
       v-motion="'pausedOverlayWrapper'"
       :initial="{
         opacity: 0,
@@ -59,12 +59,12 @@ const motions = useMotions();
           opacity: 0,
         }"
       >
-        <n-text type="primary">Paused</n-text>
+        <n-text type="primary" class="text-dark dark:text-light">Paused</n-text>
       </n-h1>
 
       <n-text
         v-if="show"
-        class="score rounded-sm px-5 py-1 text-md border border-gray-600"
+        class="score rounded-sm px-5 py-1 text-md border border-gray-600 text-dark dark:text-light"
         type="primary"
         v-motion="'scorePaused'"
         :initial="{
@@ -87,7 +87,7 @@ const motions = useMotions();
       </n-text>
 
       <button
-        class="startIcon ease-in transition-colors duration-75 text-gray-400 hover:bg-gray-600 text-sm hover:text-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-400 rounded-full p-px text-center inline-grid place-items-center"
+        class="startIcon ease-in text-dark dark:text-light transition-colors duration-75 hover:bg-gray-600 text-sm hover:text-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-400 rounded-full p-px text-center inline-grid place-items-center"
         @click="gameStore.start"
         v-motion="'pausedStartIcon'"
         :initial="{
@@ -116,7 +116,7 @@ const motions = useMotions();
       </button>
 
       <button
-        class="restartIcon ease-in transition-colors duration-75 text-gray-400 hover:bg-gray-600 text-sm hover:text-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-400 rounded-full p-px text-center inline-grid place-items-center"
+        class="restartIcon ease-in text-dark dark:text-light transition-colors duration-75 hover:bg-gray-600 text-sm hover:text-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-400 rounded-full p-px text-center inline-grid place-items-center"
         @click="
           () => {
             gameStore.reset();

@@ -26,7 +26,7 @@ const motions = useMotions();
   >
     <div
       v-if="show"
-      class="wrapper canvasOverlay canvasOverlay-filled"
+      class="wrapper canvasOverlay bg-light dark:bg-dark"
       v-motion="'firstTimeOverlayWrapper'"
       :initial="{
         opacity: 1,
@@ -73,7 +73,7 @@ const motions = useMotions();
       </n-text>
 
       <button
-        class="startIcon ease-in transition-colors duration-75 text-gray-400 hover:bg-gray-600 text-sm hover:text-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-400 rounded-full p-px text-center inline-grid place-items-center"
+        class="startIcon ease-in text-dark dark:text-light transition-colors duration-75 hover:bg-gray-600 text-sm hover:text-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-400 rounded-full p-px text-center inline-grid place-items-center"
         @click="gameStore.start"
         v-motion="'firstTimeStartIcon'"
         :initial="{

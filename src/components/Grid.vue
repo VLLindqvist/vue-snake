@@ -26,17 +26,38 @@ const gameStore = useGameStore();
   flex-direction: row;
   justify-content: stretch;
 
+  background-color: rgb(249, 250, 251);
+  @media (prefers-color-scheme: dark) {
+    background-color: rgb(31, 41, 55);
+  }
+
   &:nth-of-type(2n - 1) {
     .row {
       &:nth-of-type(2n) {
-        background-color: adjust-color($color: #303030, $red: -2, $green: -2, $blue: -2);
+        background-color: adjust-color(
+          $color: rgb(249, 250, 251),
+          $red: -20,
+          $green: -20,
+          $blue: -20
+        );
+        @media (prefers-color-scheme: dark) {
+          background-color: adjust-color($color: rgb(31, 41, 55), $red: -2, $green: -2, $blue: -2);
+        }
       }
     }
   }
   &:nth-of-type(2n) {
     .row {
       &:nth-of-type(2n-1) {
-        background-color: adjust-color($color: #303030, $red: -2, $green: -2, $blue: -2);
+        background-color: adjust-color(
+          $color: rgb(249, 250, 251),
+          $red: -20,
+          $green: -20,
+          $blue: -20
+        );
+        @media (prefers-color-scheme: dark) {
+          background-color: adjust-color($color: rgb(31, 41, 55), $red: -2, $green: -2, $blue: -2);
+        }
       }
     }
   }

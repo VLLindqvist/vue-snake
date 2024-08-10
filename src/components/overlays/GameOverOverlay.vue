@@ -23,7 +23,7 @@ const newHighScore = computed(() => gameStore.newHighScore);
   <Transition :css="false">
     <div
       v-if="show"
-      class="wrapper canvasOverlay"
+      class="wrapper canvasOverlay bg-light-transparent dark:bg-dark-transparent"
       v-motion="'gameOverOverlayWrapper'"
       :initial="{
         opacity: 0,
@@ -57,22 +57,23 @@ const newHighScore = computed(() => gameStore.newHighScore);
       <n-text
         type="primary"
         v-if="newHighScore"
-        class="gameOverPoints bg-gradient-to-r from-transparent via-gray-800 to-transparent rounded-lg px-8 py-2 text-center text-secondary"
+        class="gameOverPoints text-secondary bg-dark-transparent dark:bg-transparent rounded-lg px-8 py-2 text-center"
       >
         Congratulations though! You got a new high score. New score to beat is {{ highScore }}
       </n-text>
       <n-text
         v-if="!newHighScore"
-        class="gameOverPoints bg-gradient-to-r from-transparent via-gray-800 to-transparent rounded-lg px-8 py-2 text-center"
-        type="error"
+        class="gameOverPoints text-dark dark:text-light bg-gradient-to-r from-transparent via-gray-100 dark:via-gray-800 to-transparent rounded-lg px-8 py-2 text-center dark!:text-black"
       >
         Too bad... Better luck next time. You got {{ score }}, but your high score is
         {{ highScore }}
       </n-text>
 
-      <n-text class="gameOverInfo" depth="3">Press the button below to restart the game</n-text>
+      <n-text class="gameOverInfo text-dark dark:text-light" depth="3">
+        Press the button below to restart the game
+      </n-text>
       <button
-        class="restartIcon ease-in transition-colors duration-75 text-gray-400 hover:bg-gray-600 text-sm hover:text-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-400 rounded-full p-px text-center inline-grid place-items-center"
+        class="restartIcon ease-in text-dark dark:text-light transition-colors duration-75 hover:bg-gray-600 text-sm hover:text-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-400 rounded-full p-px text-center inline-grid place-items-center"
         @click="
           () => {
             gameStore.reset();

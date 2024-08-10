@@ -26,7 +26,7 @@ const motions = useMotions();
   >
     <div class="wrapper" v-if="show">
       <button
-        class="ease-in transition-colors duration-75 text-gray-400 hover:bg-gray-600 text-sm hover:text-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-400 rounded-full p-px text-center inline-grid place-items-center"
+        class="ease-in transition-colors duration-75 text-dark dark:text-light hover:bg-gray-600 text-sm hover:text-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-400 rounded-full p-px text-center inline-grid place-items-center"
         @click="gameStore.pause"
         v-motion="'pauseButton'"
         :initial="{
@@ -48,7 +48,7 @@ const motions = useMotions();
           scale: 0.9,
         }"
       >
-        <n-icon aria-hidden="true" :size="'4rem'">
+        <n-icon aria-hidden="true" :size="'2rem'">
           <pause-circle />
         </n-icon>
         <span class="sr-only">Pause Game</span>
@@ -60,7 +60,7 @@ const motions = useMotions();
 <style scoped lang="scss">
 .wrapper {
   position: absolute;
-  top: -3.5rem;
+  top: -1.7rem;
   width: 100%;
   display: grid;
   place-items: center;

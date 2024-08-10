@@ -27,7 +27,7 @@ onUnmounted(() => {});
 </script>
 
 <template>
-  <div class="canvas border-2 rounded-sm border-primary" ref="canvasRef">
+  <div class="canvas border-2 rounded-sm border-dark dark:border-primary" ref="canvasRef">
     <NotStartedOverlay :show="!gameStore.isPlaying && status === Status.NotStarted" />
     <PausedOverlay :show="!gameStore.isPlaying && status === Status.Ongoing" />
     <GameOverOverlay :show="status === Status.Over" />
@@ -46,7 +46,7 @@ onUnmounted(() => {});
 <style scoped lang="scss">
 .canvas {
   width: calc(100% - 1.5rem);
-  max-width: 85vh;
+  max-width: 90vh;
   aspect-ratio: 1 / 1;
   position: relative;
 }
