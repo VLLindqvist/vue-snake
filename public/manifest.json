@@ -1,6 +1,6 @@
 {
-  "name": "Vue-Snake",
-  "short_name": "Vue-Snake",
+  "name": "Vue Snake",
+  "short_name": "Vue Snake",
   "start_url": "/",
   "display": "standalone",
   "description": "The game snake",

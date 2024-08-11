@@ -57,7 +57,7 @@ const motions = useMotions();
             to: 'rgb(0, 104, 100)',
           }"
         >
-          Vue-Snake
+          Vue Snake
         </n-gradient-text>
       </n-h1>
       <n-text
