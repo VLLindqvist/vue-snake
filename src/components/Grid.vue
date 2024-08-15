@@ -28,7 +28,7 @@ const gameStore = useGameStore();
 
   background-color: rgb(249, 250, 251);
   @media (prefers-color-scheme: dark) {
-    background-color: rgb(31, 41, 55);
+    background-color: rgb(29, 37, 45);
   }
 
   &:nth-of-type(2n - 1) {
@@ -41,7 +41,7 @@ const gameStore = useGameStore();
           $blue: -20
         );
         @media (prefers-color-scheme: dark) {
-          background-color: adjust-color($color: rgb(31, 41, 55), $red: -2, $green: -2, $blue: -2);
+          background-color: adjust-color($color: rgb(29, 37, 45), $red: -2, $green: -2, $blue: -2);
         }
       }
     }
@@ -56,7 +56,7 @@ const gameStore = useGameStore();
           $blue: -20
         );
         @media (prefers-color-scheme: dark) {
-          background-color: adjust-color($color: rgb(31, 41, 55), $red: -2, $green: -2, $blue: -2);
+          background-color: adjust-color($color: rgb(29, 37, 45), $red: -2, $green: -2, $blue: -2);
         }
       }
     }
