@@ -7,8 +7,8 @@ module.exports = {
   darkMode: "media",
   theme: {
     colors: {
-      primary: "#7C3C3C",
-      secondary: "#f0e371",
+      primary: "#7A3E3A",
+      secondary: "#F3DD6D",
       transparent: "transparent",
       current: "currentColor",
       dark: "rgb(29, 37, 45)",
